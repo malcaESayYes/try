@@ -1,0 +1,14 @@
+﻿<div >
+    <div >
+        <img ng-click="vm.prev()" src="../../assets/images/left-arrow.png" style="margin-bottom:1px" />
+        
+
+        <img ng-src="{{vm.images[vm.current].src}}" height="550" width="550" />
+        <img ng-click="vm.next()" src="../../assets/images/right-arrow.png" />
+        <div ng-repeat="image in vm.under track by $index">
+            <img ng-src="{{image.src}}" height="250" width="250" style="float:left" />
+           
+        </div>
+        <input type="button" value="add" ng-click="vm.addnew()" />
+    </div>
+</div>

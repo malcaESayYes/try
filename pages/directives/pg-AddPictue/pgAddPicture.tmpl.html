@@ -1,0 +1,15 @@
+﻿<div >
+    <form name="myfom" novalidate >
+        <input type="file" id="file" class="form-control" accept="image/*"/>
+        <input type="text" placeholder="description" required />
+
+        <input type="text" placeholder="title" />
+
+        <input id="letter" name="letter" type="text"  ng-pattern="/^[a-zA-Z\s]*$/" ng-model="vm.letter" required />
+        <span ng-show="myfom.letter.$dirty && myfom.letter.$error.required"  style="color:red">letters is required</span>
+        
+        <input type="button" value="Save" ng-click="save()" ng-disabled="myfom.$invalid"/>
+        <input type="button" value="Cancel" ng-click="cancel()" />
+    </form>
+   
+</div>
